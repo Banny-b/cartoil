@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1250px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 115px;
+    padding-bottom: 15px;
+
+    @include logo;
+
+    &-info__link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        // &:hover {
+        //     opacity: 0.5;
+        // }
+    }
+
+    &-info__img {
+        vertical-align: middle;
+        fill: var(--black-color);
+        margin-right: 8px;
+    }
+
+    &-info__tel {
+        font-family: 'Montserrat-700';
+        font-size: 18px;
+        line-height: 40px;
+        color: var(--black-color);
+    }
+}

@@ -1,0 +1,61 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 1920px;
+    background: var(--light-color);
+    padding: 30px 334px 30px 334px; //*
+
+    @include logo;
+
+    &__descr-title {
+        text-align: center;
+        font-family: 'Montserrat-400';
+        font-size: 12px;
+        line-height: 34px;
+        color: var(--black-color);
+        margin-bottom: 20px;
+    }
+
+    &__descr-box {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        max-width: 370px;
+    }
+
+    &__descr-policy {
+        @extend .footer__descr-title;
+        text-decoration: underline !important;
+        margin-bottom: 0;
+    }
+
+    &__descr-phone {
+        @extend .header-info__tel;
+        margin-bottom: 20px;
+    }
+
+    &__descr-social {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__descr-social-link:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    &__descr-social-link-border {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--accent-color);
+        border-radius: 50%;
+    }
+
+    &__descr-social-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: var(--black-color);
+    }
+}

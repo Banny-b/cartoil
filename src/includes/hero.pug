@@ -1,0 +1,41 @@
+section.hero.container 
+    include header 
+
+    .hero-content 
+        .hero-content__inner 
+            h1.hero-content__title
+                | Дізнайтесь 
+                strong скільки коштує Ваше авто 
+                | та доступну позику 
+                strong за 1 хвилину!
+            form.hero-content__form
+                label.hero-content__form-label(for="user-tel") Вкажіть номер Вашого телефону
+                .hero-content__form-input-box
+                    input.hero-content__form-input(
+                        type="tel"
+                        name="user_phone"
+                        id="user-tel"
+                        placeholder="+38 066-123-45-67"
+                        title="Без пробілів та тире"
+                        required
+                    )
+                .hero-content__form-check-box
+                    input.hero-content__form-check(
+                        type="checkbox"
+                        id="user-policy"
+                    ) 
+                    label.hero-content__form-check-policy(for="user-policy") Я ознайомлений із 
+                        a.hero-content__form-check-link політикою конфіденційності
+                button.hero-content__form-btn(
+                    type="submit"
+                    href="#"
+                ) Дізнатись вартість
+                    svg.hero-content__form-btn-img(width="23" height="33") 
+                        use(href="../images/hero/touch.svg#icon-touch")
+
+        .hero-content__img 
+            img.hero-content__img-pic(src="../images/hero/vw.png" alt="Image car")
+            .hero-content__img-price 
+                p.hero-content__img-price-u VW Polo
+                p.hero-content__img-price-l 207 000 UAH
+

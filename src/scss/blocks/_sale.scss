@@ -1,0 +1,48 @@
+.sale {
+    display: flex;
+    width: 100%;
+
+    &-car {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 960px;
+        background: var(--accent-color);
+        padding: 18px 138px 0 94px;
+    }
+
+    &-car__brand {
+        position: absolute;
+        top: 150px;
+        left: 364px;
+        transform: scale(0.9) rotate(-11deg);
+    }
+
+    @include logo;
+
+    &-car__link-i {
+        @include link-styles;
+        // transition: var(--func-transit);
+        // &:hover {
+        //     text-decoration: underline !important;
+        // }
+    }
+
+    &-ptz {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 960px;
+        background: var(--black-color-2);
+        padding: 18px 170px 0 138px;
+    }
+
+    &-car__link-p {
+        @include link-styles;
+        // transition: var(--func-transit);
+        // &:hover {
+        //     text-decoration: underline !important;
+        // } 
+    }
+}
