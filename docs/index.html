@@ -48,14 +48,25 @@
       </div>
     </section>
     <section class="sale container"> 
-      <div class="sale-car"> <img class="sale-car__img" src="./images/sale/nissan.png" alt="Image car">
+      <div class="sale-car"> 
+        <picture> 
+          <source media="(max-width: 767px)" srcset="./images/sale/nissan-mob.png">
+          <source media="(min-width: 768px) and (max-width: 1199px)" srcset="./images/sale/nissan-mob.png">
+          <source media="(min-width: 1200px)" srcset="./images/sale/nissan.png"><img class="sale-car__img-auto" src="./images/sale/nissan.png" alt="Image car">
+        </picture>
         <div class="sale-car__brand"> 
               <div class="header-logo"><a class="header-logo__link">Cartoil</a>
                 <p class="header-logo__url">.ua</p>
               </div>
-        </div><a class="sale-car__link-i" href="#">Продати авто</a>
+        </div><a class="sale-car__link" href="#">Продати авто</a>
       </div>
-      <div class="sale-ptz"> <a class="sale-car__link-p" href="#">Позики під ПТЗ</a><img class="sale-car__img" src="./images/sale/ptz.png" alt="Image PTZ"></div>
+      <div class="sale-ptz"> <a class="sale-car__link" href="#">Позики під ПТЗ</a>
+        <picture> 
+          <source media="(max-width: 767px)" srcset="./images/sale/ptz-mob.png">
+          <source media="(min-width: 768px) and (max-width: 1199px)" srcset="./images/sale/ptz-mob.png">
+          <source media="(min-width: 1200px)" srcset="./images/sale/ptz.png"><img class="sale-car__img-ptz" src="./images/sale/ptz.png" alt="Image PTZ">
+        </picture>
+      </div>
     </section>
     <section class="condit contaiiner"> 
       <h2 class="condit__title">Як ми продаємо Ваш автомобіль</h2>
@@ -66,8 +77,10 @@
               <use href="./images/condition/img-1.svg#icon-check"> </use>
             </svg>
           </div>
-          <h3 class="condit__item-subtitle"> <span class="condit__item-subtitle-num">1. </span>Запишіться на огляд авто</h3>
-          <p class="condit__item-text">Оцініть Ваш автомобіль, заповнивши просту форму, та дочекайтеся дзвінка оператора.</p>
+          <div class="condit__item-inner">
+            <h3 class="condit__item-subtitle"> <span class="condit__item-subtitle-num">1. </span>Запишіться на огляд авто</h3>
+            <p class="condit__item-text">Оцініть Ваш автомобіль, <a class="condit__item-text-link">заповнивши просту форму</a>, та дочекайтеся дзвінка оператора.</p>
+          </div>
         </li>
         <li class="condit__item"> 
           <div class="condit__item-substrate">
@@ -75,8 +88,10 @@
               <use href="./images/condition/img-2.svg#icon-service"> </use>
             </svg>
           </div>
-          <h3 class="condit__item-subtitle"> <span class="condit__item-subtitle-num">2. </span>Пройдіть безкоштовний технічний опис </h3>
-          <p class="condit__item-text">У зручний час приїжджайте до найближчої філії CarPrice, де ми проведемо технічний опис та перевіримо юридичну «чистоту» машини абсолютно безкоштовно.</p>
+          <div class="condit__item-inner">
+            <h3 class="condit__item-subtitle"> <span class="condit__item-subtitle-num">2. </span>Пройдіть безкоштовний технічний опис </h3>
+            <p class="condit__item-text">У зручний час приїжджайте до найближчої філії CarPrice, де ми проведемо технічний опис та перевіримо юридичну «чистоту» машини абсолютно безкоштовно.</p>
+          </div>
         </li>
         <li class="condit__item"> 
           <div class="condit__item-substrate">
@@ -84,8 +99,10 @@
               <use href="./images/condition/img-3.svg#icon-offer"> </use>
             </svg>
           </div>
-          <h3 class="condit__item-subtitle"> <span class="condit__item-subtitle-num">3. </span>Отримайте пропозицію</h3>
-          <p class="condit__item-text">Всю зібрану інформацію ми використовуємо для формування чесної ціни на Ваш автомобіль.</p>
+          <div class="condit__item-inner">
+            <h3 class="condit__item-subtitle"> <span class="condit__item-subtitle-num">3. </span>Отримайте пропозицію</h3>
+            <p class="condit__item-text">Всю зібрану інформацію ми використовуємо для формування чесної ціни на Ваш автомобіль.</p>
+          </div>
         </li>
         <li class="condit__item"> 
           <div class="condit__item-substrate">
@@ -93,8 +110,10 @@
               <use href="./images/condition/img-4.svg#icon-cash"> </use>
             </svg>
           </div>
-          <h3 class="condit__item-subtitle"> <span class="condit__item-subtitle-num">4. </span>Отримайте гроші за Ваш автомобіль </h3>
-          <p class="condit__item-text">Якщо Ви погоджуєтесь із запропонованою ціною, ми оформимо документи, і Ви відразу ж отримаєте всю суму готівкою або на банківську картку.</p>
+          <div class="condit__item-inner">
+            <h3 class="condit__item-subtitle"> <span class="condit__item-subtitle-num">4. </span>Отримайте гроші за Ваш автомобіль </h3>
+            <p class="condit__item-text">Якщо Ви погоджуєтесь із запропонованою ціною, ми оформимо документи, і Ви відразу ж отримаєте всю суму готівкою або на банківську картку.</p>
+          </div>
         </li>
       </ul>
       <button class="condit__btn" type="submit" href="#">Дізнатись вартість

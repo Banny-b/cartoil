@@ -1,48 +1,134 @@
 .sale {
     display: flex;
-    width: 1920px;
+    overflow-x: hidden;
 
     &-car {
         position: relative;
         display: flex;
-        justify-content: center;
         align-items: center;
-        max-width: 960px;
         background: var(--accent-color);
-        padding: 18px 138px 0 94px;
     }
 
     &-car__brand {
         position: absolute;
-        top: 150px;
-        left: 364px;
-        transform: scale(0.9) rotate(-11deg);
     }
 
     @include logo;
 
-    &-car__link-i {
+    &-car__link {
         @include link-styles;
-        // transition: var(--func-transit);
-        // &:hover {
-        //     text-decoration: underline !important;
-        // }
     }
 
     &-ptz {
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 960px;
         background: var(--black-color-2);
-        padding: 18px 170px 0 138px;
     }
+}
 
-    &-car__link-p {
-        @include link-styles;
-        // transition: var(--func-transit);
-        // &:hover {
-        //     text-decoration: underline !important;
-        // } 
+// Mobile
+@media screen and (min-width: 375px) {
+    .sale {
+        &-car {
+            flex-direction: column;
+            max-width: 188px;
+            max-height: 286px;
+            padding: 0 0 100px 0;
+        }
+    
+        &-car__brand {
+            top: 73px;
+            left: 40px;
+            transform: scale(0.5) rotate(-11deg);
+        }
+    
+        @include logo;
+    
+        &-car__link {
+            @include link-styles;
+            padding-bottom: 35px;
+        }
+    
+        &-ptz {
+            flex-direction: column-reverse;
+            max-width: 188px;
+            height: 286px;
+            padding: 0 25px 100px 30px;
+        }
+    
+        &-car__img-ptz {
+            transform: translate(19%, 23%);
+        }
+    }
+}
+
+// Tablet
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .sale {
+        &-car {
+            flex-direction: row;
+            max-width: 384px;
+            padding: 0 83px 0 0;
+        }
+    
+        &-car__brand {
+            top: 125px;
+            left: 40px;
+            transform: scale(0.5) rotate(-11deg);
+        }
+    
+        @include logo;
+    
+        &-ptz {
+            flex-direction: row;
+            max-width: 384px;
+            padding: 0 66px 0 65px;
+        }
+    
+        &-car__img-ptz {
+            transform: translate(50%, 4%);
+        }
+    }
+}
+
+// Desktop
+@media screen and (min-width: 1200px) {
+    .sale {
+        &-car {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            max-width: 960px;
+            padding: 0 138px 0 94px;
+        }
+    
+        &-car__brand {
+            top: 130px;
+            left: 364px;
+            transform: scale(0.9) rotate(-11deg);
+        }
+    
+        @include logo;
+    
+        &-car__link {
+            @include link-styles;
+            transition: var(--func-transit);
+            &:hover {
+                text-decoration: underline !important;
+            }
+        }
+    
+        &-ptz {
+            flex-direction: row;
+            align-items: center;
+            max-width: 960px;
+            padding: 0 170px 0 138px;
+        }
+    
+        &-car__img-ptz {
+            transform: translate(0, 2%);
+            max-height: 280px;
+        }
     }
 }

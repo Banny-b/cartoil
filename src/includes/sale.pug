@@ -2,10 +2,18 @@ include mixin/logo
 
 section.sale.container 
     .sale-car 
-        img.sale-car__img(src="./images/sale/nissan.png" alt="Image car")
+        picture 
+            source(media="(max-width: 767px)", srcset="./images/sale/nissan-mob.png") 
+            source(media="(min-width: 768px) and (max-width: 1199px)", srcset="./images/sale/nissan-mob.png") 
+            source(media="(min-width: 1200px)", srcset="./images/sale/nissan.png") 
+            img.sale-car__img-auto(src="./images/sale/nissan.png" alt="Image car") 
         .sale-car__brand 
             +logo
-        a.sale-car__link-i(href="#") Продати авто
+        a.sale-car__link(href="#") Продати авто
     .sale-ptz 
-        a.sale-car__link-p(href="#") Позики під ПТЗ
-        img.sale-car__img(src="./images/sale/ptz.png" alt="Image PTZ")
+        a.sale-car__link(href="#") Позики під ПТЗ
+        picture 
+            source(media="(max-width: 767px)", srcset="./images/sale/ptz-mob.png") 
+            source(media="(min-width: 768px) and (max-width: 1199px)", srcset="./images/sale/ptz-mob.png") 
+            source(media="(min-width: 1200px)", srcset="./images/sale/ptz.png")
+            img.sale-car__img-ptz(src="./images/sale/ptz.png" alt="Image PTZ")
