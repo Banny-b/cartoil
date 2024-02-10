@@ -49,16 +49,50 @@
         padding: 10px 20px 10px 45px;
     }
 
+    //ToDo Custom checkbox
     &-content__form-check-box {
+        position: relative;
         display: flex;
+        align-items: center;
         margin-bottom: 15px;
     }
 
     &-content__form-check {
-        width: 20px;
-        height: 20px;
-        margin: 0 15px 15px 15px;
+        position: absolute;
+        opacity: 0; // Hiding default checkbox
     }
+
+    &-content__form-check-policy {
+        display: flex;
+        align-items: center;
+        // Checkbox-emulator start
+        &::before {
+            position: relative;
+            display: block;
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 1px solid var(--black-color);
+            border-radius: 3px;
+            background: var(--light-color);
+            margin: 0 15px 15px 15px;
+            transform: translateY(30%);
+            cursor: pointer;
+        }
+        .hero-content__form-check:checked + &::after {
+            display: block;
+            position: absolute;
+            top: 48%;
+            left: 8%;
+            transform: translate(-50%, -50%);
+            content: "✔";
+            font-size: 12px;
+            line-height: 20;
+            color: var(--accent-color);
+        }
+        // Checkbox-emulator end
+    }
+    //ToDo
 
     &-content__form-check-policy {
         font-family: 'Montserrat-300';
