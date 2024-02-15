@@ -6,8 +6,8 @@ section.sale.container
             source(media="(max-width: 767px)", srcset="./images/sale/nissan-mob.png") 
             source(media="(min-width: 768px) and (max-width: 1199px)", srcset="./images/sale/nissan-mob.png") 
             source(media="(min-width: 1200px)", srcset="./images/sale/nissan.png") 
-            img.sale-car__img-auto(src="./images/sale/nissan.png" alt="Image car") 
-        .sale-car__brand 
+            img.sale-car__img-auto.wow.animate__fadeInLeft(data-wow-delay="1s")(src="./images/sale/nissan.png" alt="Image car") 
+        .sale-car__brand.wow.animate__fadeIn(data-wow-delay="2s")
             +logo
         a.sale-car__link(href="#") Продати авто
     .sale-ptz 
@@ -16,4 +16,4 @@ section.sale.container
             source(media="(max-width: 767px)", srcset="./images/sale/ptz-mob.png") 
             source(media="(min-width: 768px) and (max-width: 1199px)", srcset="./images/sale/ptz-mob.png") 
             source(media="(min-width: 1200px)", srcset="./images/sale/ptz.png")
-            img.sale-car__img-ptz(src="./images/sale/ptz.png" alt="Image PTZ")
+            img.sale-car__img-ptz.wow.animate__fadeIn(data-wow-delay="2s")(src="./images/sale/ptz.png" alt="Image PTZ")

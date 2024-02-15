@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <title>Cartoil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="./css/main.css">
   </head>
   <body> 
-    <section class="hero container"> 
+    <section class="hero container" id="top">
       <header class="header"> 
-              <div class="header-logo"><a class="header-logo__link">Cartoil</a>
+              <div class="header-logo"><a class="header-logo__link" href="#top">Cartoil</a>
                 <p class="header-logo__url">.ua</p>
               </div>
         <div class="header-info"> <a class="header-info__link">
@@ -39,10 +40,10 @@
             </button>
           </form>
         </div>
-        <div class="hero-content__img"> <img class="hero-content__img-pic" src="./images/hero/vw.png" alt="Image car">
-          <div class="hero-content__img-price"> 
-            <p class="hero-content__img-price-u">VW Polo</p>
-            <p class="hero-content__img-price-l">207 000 UAH</p>
+        <div class="hero-content__img"> <img class="hero-content__img-pic wow animate__fadeInRight" src="./images/hero/vw.png" alt="Image car" data-wow-delay="2s">
+          <div class="hero-content__img-price wow animate__fadeIn" data-wow-delay="3s">
+            <p class="hero-content__img-price-u wow animate__fadeIn" data-wow-delay="4s">VW Polo</p>
+            <p class="hero-content__img-price-l wow animate__fadeIn" data-wow-delay="5s">207 000 UAH</p>
           </div>
         </div>
       </div>
@@ -52,10 +53,10 @@
         <picture> 
           <source media="(max-width: 767px)" srcset="./images/sale/nissan-mob.png">
           <source media="(min-width: 768px) and (max-width: 1199px)" srcset="./images/sale/nissan-mob.png">
-          <source media="(min-width: 1200px)" srcset="./images/sale/nissan.png"><img class="sale-car__img-auto" src="./images/sale/nissan.png" alt="Image car">
+          <source media="(min-width: 1200px)" srcset="./images/sale/nissan.png"><img class="sale-car__img-auto wow animate__fadeInLeft" data-wow-delay="1s" src="./images/sale/nissan.png" alt="Image car">
         </picture>
-        <div class="sale-car__brand"> 
-              <div class="header-logo"><a class="header-logo__link">Cartoil</a>
+        <div class="sale-car__brand wow animate__fadeIn" data-wow-delay="2s">
+              <div class="header-logo"><a class="header-logo__link" href="#top">Cartoil</a>
                 <p class="header-logo__url">.ua</p>
               </div>
         </div><a class="sale-car__link" href="#">Продати авто</a>
@@ -64,14 +65,14 @@
         <picture> 
           <source media="(max-width: 767px)" srcset="./images/sale/ptz-mob.png">
           <source media="(min-width: 768px) and (max-width: 1199px)" srcset="./images/sale/ptz-mob.png">
-          <source media="(min-width: 1200px)" srcset="./images/sale/ptz.png"><img class="sale-car__img-ptz" src="./images/sale/ptz.png" alt="Image PTZ">
+          <source media="(min-width: 1200px)" srcset="./images/sale/ptz.png"><img class="sale-car__img-ptz wow animate__fadeIn" data-wow-delay="2s" src="./images/sale/ptz.png" alt="Image PTZ">
         </picture>
       </div>
     </section>
     <section class="condit contaiiner"> 
       <h2 class="condit__title">Як ми продаємо Ваш автомобіль</h2>
       <ul class="condit__list"> 
-        <li class="condit__item"> 
+        <li class="condit__item wow animate__fadeInUp" data-wow-delay="1s"> 
           <div class="condit__item-substrate"> 
             <svg class="condit__item-substrate-img" width="53" height="57"> 
               <use href="./images/condition/img-1.svg#icon-check"> </use>
@@ -82,7 +83,7 @@
             <p class="condit__item-text">Оцініть Ваш автомобіль, <a class="condit__item-text-link">заповнивши просту форму</a>, та дочекайтеся дзвінка оператора.</p>
           </div>
         </li>
-        <li class="condit__item"> 
+        <li class="condit__item wow animate__fadeInUp" data-wow-delay="2s"> 
           <div class="condit__item-substrate">
             <svg class="condit__item-substrate-img" width="54" height="54"> 
               <use href="./images/condition/img-2.svg#icon-service"> </use>
@@ -93,7 +94,7 @@
             <p class="condit__item-text">У зручний час приїжджайте до найближчої філії CarPrice, де ми проведемо технічний опис та перевіримо юридичну «чистоту» машини абсолютно безкоштовно.</p>
           </div>
         </li>
-        <li class="condit__item"> 
+        <li class="condit__item wow animate__fadeInUp" data-wow-delay="3s"> 
           <div class="condit__item-substrate">
             <svg class="condit__item-substrate-img" width="54" height="45"> 
               <use href="./images/condition/img-3.svg#icon-offer"> </use>
@@ -104,7 +105,7 @@
             <p class="condit__item-text">Всю зібрану інформацію ми використовуємо для формування чесної ціни на Ваш автомобіль.</p>
           </div>
         </li>
-        <li class="condit__item"> 
+        <li class="condit__item wow animate__fadeInUp" data-wow-delay="4s"> 
           <div class="condit__item-substrate">
             <svg class="condit__item-substrate-img" width="46" height="46"> 
               <use href="./images/condition/img-4.svg#icon-cash"> </use>
@@ -123,7 +124,7 @@
       </button>
     </section>
     <footer class="footer container"> 
-          <div class="header-logo"><a class="header-logo__link">Cartoil</a>
+          <div class="header-logo"><a class="header-logo__link" href="#top">Cartoil</a>
             <p class="header-logo__url">.ua</p>
           </div>
       <div class="footer__descr"> 
@@ -150,4 +151,7 @@
       </div>
     </footer>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"> </script>
+  <script src="./js/main.js"> </script>
 </html>

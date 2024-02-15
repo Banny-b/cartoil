@@ -1,4 +1,4 @@
-section.hero.container 
+section.hero.container(id="top")
     include header 
 
     .hero-content 
@@ -35,8 +35,8 @@ section.hero.container
                         use(href="./images/hero/touch.svg#icon-touch")
 
         .hero-content__img 
-            img.hero-content__img-pic(src="./images/hero/vw.png" alt="Image car")
-            .hero-content__img-price 
-                p.hero-content__img-price-u VW Polo
-                p.hero-content__img-price-l 207 000 UAH
+            img.hero-content__img-pic.wow.animate__fadeInRight(src="./images/hero/vw.png" alt="Image car" data-wow-delay="2s")
+            .hero-content__img-price.wow.animate__fadeIn(data-wow-delay="3s")
+                p.hero-content__img-price-u.wow.animate__fadeIn(data-wow-delay="4s") VW Polo
+                p.hero-content__img-price-l.wow.animate__fadeIn(data-wow-delay="5s") 207 000 UAH
 

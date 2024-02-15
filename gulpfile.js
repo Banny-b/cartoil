@@ -6,6 +6,8 @@ const csso = require('gulp-csso');
 const maps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
+const webpack = require('webpack-stream');
+const babel = require('gulp-babel');
 const clean = require('gulp-clean');
 const fs = require('fs');
 const server = require('gulp-server-livereload');
@@ -63,6 +65,23 @@ gulp.task('img', function() {
         .pipe(gulp.dest('./docs/images/'))
 })
 
+// Task for JavaScript
+gulp.task('js', function(){
+    return gulp
+        .src('./src/js/*.js')
+        .pipe(changed('./docs/js/'))
+        .pipe(plumber({
+            errorHandler: notify.onError({
+                title: 'JS',
+                message: 'Error <%= error.message %>',
+                sound: false
+            })
+        }))
+        .pipe(babel())
+        .pipe(webpack(require('./webpack.config.js')))
+        .pipe(gulp.dest('./docs/js/'))
+})
+
 // Task for clean docs
 gulp.task('clean', function(done) {
     if (fs.existsSync('./docs/')) {
@@ -79,6 +98,7 @@ gulp.task('watch', function() {
     gulp.watch('./src/scss/**/*.scss', gulp.parallel('sass'))
     gulp.watch('./src/fonts/**/*', gulp.parallel('fonts'))
     gulp.watch('./src/images/**/*', gulp.parallel('img'))
+    gulp.watch('./src/js/**/*.js', gulp.parallel('js'))
 });
 
 // Task for Server
@@ -90,6 +110,6 @@ gulp.task('server', function() {
 
 // Task Default
 gulp.task('default', 
-    gulp.series('clean', gulp.parallel('pug', 'sass', 'fonts', 'img'), 
+    gulp.series('clean', gulp.parallel('pug', 'sass', 'fonts', 'img', 'js'), 
     gulp.parallel('server', 'watch')
 ));
